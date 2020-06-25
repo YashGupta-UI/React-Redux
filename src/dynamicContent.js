@@ -13,27 +13,27 @@ import React, { Component } from 'react';
 
 class Dynamic extends Component {
 	state = {
-		monster: [
-			{
-				id: 100,
-				name: 'Zombie',
-			},
-			{
-				id: 200,
-				name: 'Dracula',
-			},
-			{
-				id: 300,
-				name: 'Harbola',
-			},
-		],
+		monster: [],
 	};
 
+	//lifecycle methods -> class based component
+
+	componentDidMount() {
+		console.log('Did mount');
+		// best place to call for the api
+		fetch('https://jsonplaceholder.typicode.com/users')
+			.then(res => res.json())
+			.then(result => this.setState({ monster: result }));
+	}
+
 	render() {
+		console.log('inside render');
+		const { monster } = this.state;
+
 		return (
 			<div>
-				{this.state.monster.map(item => (
-					<h2 key={item.id}>{item.name}</h2>
+				{monster.map(item => (
+					<h1 key={item.id}>{item.name}</h1>
 				))}
 			</div>
 		);

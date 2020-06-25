@@ -1,39 +1,25 @@
 import React, { Component } from 'react';
-import { ClassExample } from './classExample';
-import { FunctionComponent } from './functionalComponent';
+import { YashDemo } from './yashDemo.js';
 
 class App extends Component {
-	constructor() {
-		super();
+	state = {
+		monster: [],
+		count: 0,
+	};
 
-		this.state = {
-			text: 'Harbola',
-			id: 1,
-		};
-	}
-
-	handleClick = () => {
-		this.setState({ text: 'HOHOHOHOHO' });
+	incrementClick = () => {
+		this.setState({ count: this.state.count + 1 });
 	};
 
 	render() {
 		return (
-			<div className="exampleeeee">
-				<ClassExample />
-				{2 + 3}
-				<h1>{this.state.text}</h1>
-				<button onClick={this.handleClick}>Click Me to change to text harbola </button>
-				<FunctionComponent mereMarzi="harshit pandey" myItem={[1, 2, 3]} />
+			<div>
+				<h1>{this.state.count}</h1>
+				<button onClick={this.incrementClick}>Increment</button> <br />
+				<YashDemo name="yash" age="27" count={this.state.count} />
 			</div>
 		);
 	}
 }
 
 export default App;
-
-// JSX Limitation
-
-// 1 We need to use the className intead of class coz class is a reserved keyword in react
-// 2 Adjacent jsx elements must be enclosed in a wrapper
-// 3 In JSX we need to use curly braces {} for the js expression
-// 4 Synthetic Events   onclick onchange
