@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import { YashDemo } from './yashDemo.js';
+import CardList from './components/card-list/cardList';
 
 class App extends Component {
 	state = {
 		monster: [],
-		count: 0,
+		searchText: '',
 	};
 
-	incrementClick = () => {
-		this.setState({ count: this.state.count + 1 });
-	};
+	componentDidMount() {
+		fetch('https://jsonplaceholder.typicode.com/users')
+			.then(response => response.json())
+			.then(response => this.setState({ monster: response }));
+	}
 
 	render() {
 		return (
 			<div>
-				<h1>{this.state.count}</h1>
-				<button onClick={this.incrementClick}>Increment</button> <br />
-				<YashDemo name="yash" age="27" count={this.state.count} />
+				<h1>MONSTER APP</h1>
+				<CardList monster={this.state.monster} />
 			</div>
 		);
 	}
