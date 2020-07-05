@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
-import State from './component/state';
-import FunctionClick from './component/functionClick';
-import EventBinding from './component/classEvent';
-import Parent from './component/parent';
+import React from 'react';
+import './App.css';
+import FormHandling from './components/FormHandling';
+import Fragments from './components/Fragments';
+import Table from './components/Table';
+import Parent from './components/ParentComp';
+import ParentExample from './components/Parent';
 
-class App extends Component {
-	render() {
-		return (
-			<div>
-				{/* <State /> */}
-				{/* <FunctionClick /> */}
-				{/* <EventBinding /> */}
-				<Parent />
-			</div>
-		);
-	}
+function App() {
+	return (
+		<div className="App">
+			{/* <FormHandling /> */}
+			{/* <Fragments /> */}
+			{/* <Table /> */}
+			<Parent />
+			{/* <ParentExample /> */}
+		</div>
+	);
 }
 
 export default App;
