@@ -1,37 +1,36 @@
 import React, { Component } from 'react';
-import ClickCounter from './component/ClickCounter';
-import HoverCounter from './component/HoverCounter';
-import ComponentC from './component/ComponentC';
-import { UserProvider } from './component/Context';
+import Harbola from './components/Harbola';
+import Badola from './components/Badola';
+import Pandey from './components/Pandey';
+import { Route, Link, Redirect } from 'react-router-dom';
+import './App.css';
 
 class App extends Component {
-	state = {
-		lang: 'en',
-	};
 	render() {
+		console.log('props', this.props);
 		return (
 			<div>
-				{/* <ClickCounter age="27" hoho="lulu" />
-        <HoverCounter /> */}
-				{/* Mnaully passing props <ComponentC lang={this.state.lang} /> */}
-				{/*  value is a attribute in the provider */}
-				<UserProvider value={this.state.lang}>
-					<ComponentC />
-				</UserProvider>
+				<ul>
+					<li>
+						<Link to="/harbaola">Harbola</Link>
+					</li>
+					<li>
+						<Link to="/pandey">Pandey</Link>
+					</li>
+					<li>
+						<Link to="/badola">Badola</Link>
+					</li>
+				</ul>
+
+				{/*<Route path="/harbaola" render={() => <h1>HUHUHUHUHUH</h1>} /> */}
+				<Route path="/" exact render={() => <h1>Welcome</h1>} />
+				<Route path="/product" component={Harbola} />
+				<Route path="/pandey" component={Pandey} />
+				<Route path="/badola" component={Badola} />
+				<Redirect to="/badola" />
 			</div>
 		);
 	}
 }
 
 export default App;
-
-// lifting state up -> react org
-
-// hoc- > to share common functionality between the components
-
-// hoc -> A Higher Order Component is a pattern where a function takes a component as an argument
-// and return a new component
-
-// const NewComponent = higherOrder(originalComponent)
-
-// const IronMan = withSuit('Tony Stark')
