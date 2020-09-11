@@ -24,7 +24,7 @@ class App extends Component {
 
 	shouldComponentUpdate() {
 		console.log('in should component update');
-		return true;
+		return false;
 	}
 
 	componentDidUpdate() {

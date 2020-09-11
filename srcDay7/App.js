@@ -11,13 +11,13 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				{/* <ClickCounter age="27" hoho="lulu" />
-        <HoverCounter /> */}
+				<ClickCounter age="27" hoho="lulu" />
+				<HoverCounter test="28" />
 				{/* Mnaully passing props <ComponentC lang={this.state.lang} /> */}
 				{/*  value is a attribute in the provider */}
-				<UserProvider value={this.state.lang}>
+				{/* <UserProvider value={this.state.lang}>
 					<ComponentC />
-				</UserProvider>
+		</UserProvider> */}
 			</div>
 		);
 	}
@@ -32,6 +32,6 @@ export default App;
 // hoc -> A Higher Order Component is a pattern where a function takes a component as an argument
 // and return a new component
 
-// const NewComponent = higherOrder(originalComponent)
+// const NewComponent = higherOrder(originalComponent);
 
-// const IronMan = withSuit('Tony Stark')
+// const IronMan = withSuit('Tony Stark');

@@ -4,7 +4,7 @@
 2. State
 3. Props
 4. JSX -> className , parent wrapper, events onClick (synthetic events)
-5. Lifecycle methods 
+5. Lifecycle methods -> class components
 
 // Initital Phase -> constructor() , componentWillMount(), render() , componentDidMount()
 // Updation Phase -> componentWillRecieveProps(),  shouldComponentUpdate(),componentWillUpdate() , render() , componentDidUpdate() 

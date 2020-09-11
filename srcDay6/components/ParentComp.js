@@ -21,8 +21,8 @@ class Parent extends Component {
 		const { name } = this.state;
 		return (
 			<div>
-				{/* <PureComponent propName={name} />
-		<RegularComp propName={name} /> */}
+				{/* <PureComponent propName={name} /> */}
+				{/* <RegularComp propName={name} /> */}
 				<Memo propsName={name} />
 			</div>
 		);

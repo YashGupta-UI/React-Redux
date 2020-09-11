@@ -5,4 +5,4 @@ function Memo({ propsName }) {
 	return <div>{propsName}</div>;
 }
 
-export default React.memo(Memo); // HOF
+export default React.memo(Memo); // HOC

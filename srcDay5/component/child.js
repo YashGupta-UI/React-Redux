@@ -2,6 +2,11 @@ import React from 'react';
 
 export const Child = props => {
 	console.log('props', props);
+	let yash = {
+		name: 'yash',
+		age: 27,
+	};
+
 	return (
 		<div>
 			<button onClick={props.greetHandler}>GreetMe</button>
@@ -9,3 +14,5 @@ export const Child = props => {
 		</div>
 	);
 };
+
+// react 2 main feature -> virtual dom , unidirectional data flow

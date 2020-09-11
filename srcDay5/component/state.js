@@ -12,23 +12,25 @@ class State extends Component {
 		// 	console.log('state', this.state.count);
 		// });
 
-		this.setState({ count: this.state.count + 1 });
+		// this.setState({ count: this.state.count + 1 });
 
 		this.setState(prevState => ({
 			count: prevState.count + 1,
 		}));
-		console.log('state', this.state.count);
+
+		//console.log('state', this.state.count);
 	};
 
 	incrementFive = () => {
-		this.increment(); // 1
 		this.increment(); //
-		// this.increment(); //
-		// this.increment(); //
-		// this.increment(); //
+		this.increment(); //
+		this.increment(); //
+		this.increment(); //
+		this.increment(); //
 	};
 
 	render() {
+		console.log('in renderrrrrrrr');
 		return (
 			<div>
 				<div>Count:{this.state.count}</div>

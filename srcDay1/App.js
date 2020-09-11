@@ -1,5 +1,5 @@
 import React from 'react';
-import { Harbola } from './harbola';
+import { Harbola as Test } from './harbola'; // alias
 import Pandey from './pandey';
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<div>React Yash</div>
-				<Harbola />
+				<Test />
 				<Pandey />
 			</header>
 		</div>

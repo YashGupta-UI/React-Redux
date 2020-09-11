@@ -5,6 +5,7 @@ import Fragments from './components/Fragments';
 import Table from './components/Table';
 import Parent from './components/ParentComp';
 import ParentExample from './components/Parent';
+import Example from './doubts';
 
 function App() {
 	return (
@@ -12,8 +13,9 @@ function App() {
 			{/* <FormHandling /> */}
 			{/* <Fragments /> */}
 			{/* <Table /> */}
-			<Parent />
+			{/* <Parent /> */}
 			{/* <ParentExample /> */}
+			{/* <Example name="yash" /> */}
 		</div>
 	);
 }

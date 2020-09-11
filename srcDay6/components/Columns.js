@@ -24,6 +24,4 @@ export default Columns;
 			)})}
 
 
-
-
 */

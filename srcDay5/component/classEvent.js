@@ -9,7 +9,7 @@ class EventBinding extends Component {
 		};
 
 		this.changeName = this.changeName.bind(this);
-		this.secondHand = this.secondHand.bind(this);
+		//this.secondHand = this.secondHand.bind(this);
 	}
 
 	changeName() {
@@ -32,9 +32,10 @@ class EventBinding extends Component {
 		return (
 			<div>
 				<div>{this.state.name}</div>
+				<button onClick={this.changeName}>Click</button>
 				{/* 1st way => <button onClick={this.changeName.bind(this)}>Click</button> */}
 				{/* <button onClick={() => this.changeName()}>Click</button> */}
-				<button onClick={this.changeName}>Click</button>
+				{/* <button onClick={this.changeName}>Click</button> */}
 			</div>
 		);
 	}

@@ -11,7 +11,7 @@ class Child extends Component {
 	}
 
 	componentWillUpdate() {
-		console.log(' child will update');
+		console.log('child will update');
 	}
 
 	shouldComponentUpdate() {
