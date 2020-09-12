@@ -4,16 +4,30 @@ import HookCounter from './HookCounter';
 import HookCounter2 from './HookCounter2';
 import HookCounter3 from './HookCounter3';
 import HookCounter4 from './HookCounter4';
+import ClassCounterOne from './UseEffect/ClassCounterOne';
+import { HookCounterOne } from './UseEffect/HookCounterOne';
+import ClassCounterCondition from './UseEffect/CLassCounterCondition';
+import { HookCounterCondition } from './UseEffect/HookCounterCondition';
+import MousePosition from './UseEffect/MousePosition';
+import { HookMousePosition } from './UseEffect/HookMousePosition';
+import { MouseContainer } from './UseEffect/MouseContainer';
 
 class App extends Component {
 	render() {
 		return (
 			<div>
-				<ClassCounter />
+				{/* <ClassCounter />
 				<HookCounter />
 				<HookCounter2 />
 				<HookCounter3 />
-				<HookCounter4 />
+				<HookCounter4 /> 
+			    <ClassCounterOne />
+				<HookCounterOne /> 
+				<ClassCounterCondition />
+				<HookCounterCondition /> 
+				<MousePosition /> 
+				<HookMousePosition /> */}
+				<MouseContainer />
 			</div>
 		);
 	}
