@@ -1,0 +1,26 @@
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+}
+
+li {
+	display: inline-block;
+	margin: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: orange;
+}
+
+a.active {
+	color: green;
+}
